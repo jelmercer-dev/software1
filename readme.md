@@ -1,5 +1,7 @@
-Software 1 - Python exercises
+# Software 1 - Python exercises
 
-Denys Khliustin
+**Denys Khliustin**
 
-Module 1
+## Module 1
+
+I completed exercises 1 and 2.
