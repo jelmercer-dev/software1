@@ -1,10 +1,9 @@
-#user = input ("Enter your name: ")
-#print("i'm " + user + "!!!!!")
+import math
 
-input()
+radius = input("Enter the radius of the circle: ")
 
-points = 50  # points is now 50
-print(points)  # prints: 50
+radius = float(radius)
 
-points =120  # now points is 120
-print(points)  # prints: 120
+area= radius ** 2 * math.pi
+
+print("The area of the circle is: " + str(area))    
