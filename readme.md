@@ -8,4 +8,4 @@ I completed exercise.
 
 ## Module 3
 
-I completed exercise 1, 2s.
+I completed exercises 1, 2, 3 .
