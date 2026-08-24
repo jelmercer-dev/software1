@@ -1,9 +1,4 @@
 import math
 
-radius = input("Enter the radius of the circle: ")
-
-radius = float(radius)
-
-area= radius ** 2 * math.pi
-
-print("The area of the circle is: " + str(area))    
+print(f"{'Pi':12s}:{math.pi:10.5f}")
+print(f"{'e':12s}:{math.e:10.5f}")
