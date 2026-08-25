@@ -1,9 +1,11 @@
-import math
+money = float(input("Enter the amount of money you have: "))
+age = int(input("Enter your age: "))
 
-radius = input("Enter the radius of the circle: ")
-
-radius = float(radius)
-area = radius ** 2 * math.pi
+print(money >= 5)
+print(age >= 18)
 
 
-print("The area of the circle is: " + str(area))
+if money >= 5 and age >= 18:
+    print("You can buy a drink.") 
+else:
+    print("You cannot buy a drink.")
