@@ -12,4 +12,4 @@ I completed exercises 1, 2, 3, 4, 5.
 
 ## Module 4
 
-I completed exercises .
+I completed exercises 1.
