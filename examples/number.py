@@ -1,11 +1,36 @@
-money = float(input("Enter the amount of money you have: "))
-age = int(input("Enter your age: "))
+option = input("Choose an option: \n1. add \n2. subtract \n3. multiply \n4. divide \n0. exit \n \n")
 
-print(money >= 5)
-print(age >= 18)
+while option != "0":
+
+        if option == "1":  
+            number1 = float(input("Enter the first number: "))
+            number2 = float(input("Enter the second number: "))
+            result = number1 + number2
+
+        elif option == "2":
+            number1 = float(input("Enter the first number: "))
+            number2 = float(input("Enter the second number: "))
+            result = number1 - number2
+
+        elif option == "3":
+            number1 = float(input("Enter the first number: "))
+            number2 = float(input("Enter the second number: "))
+            result = number1 * number2
+
+        elif option == "4":
+            number1 = float(input("Enter the first number: "))
+            number2 = float(input("Enter the second number: "))
+            result = number1 / number2
+
+        else:
+            print("Invalid option. Please choose a valid option.")
+            option = input("Choose an option: \n1. add \n2. subtract \n3. multiply \n4. divide \n0. exit \n \n")
+        print(f"The result is: {result}")
+
+        
+        
+
+if option == "0":
+    print("Exiting the program.")
 
 
-if money >= 5 and age >= 18:
-    print("You can buy a drink.") 
-else:
-    print("You cannot buy a drink.")
