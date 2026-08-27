@@ -1,18 +1,13 @@
 
 numbers = []
 
-number = input("Enter: ")
+number = input("Enter a number (or press Enter to quit): ")
 
 while number != "":
     numbers.append(float(number))
-    number = input("Enter the next name or quit by pressing Enter: ")
+    number = input("Enter a number (or press Enter to quit): ")
 
 if numbers: 
-    print("Largest: ", max(numbers))
-    print("Smallest: ", min(numbers))
-
-
-
-# for n in numbers:
-#     print("Hello!", max(n))
-#     print("Hello!", min(n))
+    print("Smallest number:",min(numbers))
+    print("Largest number:",max(numbers))
+    
