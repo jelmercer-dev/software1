@@ -1,8 +1,4 @@
-first = 1
+names = ["Viivi", "Ahmed", "Pekka", "Olga", "Mary"]
 
-while first <= 5:
-    second = 1
-    while second <= 5:
-        print(f"{first} times {second} is {first*second:d}")
-        second = second + 1
-    first = first + 1
+print(names[-2])
+print(names[1:2])
