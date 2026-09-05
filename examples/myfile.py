@@ -1,10 +1,4 @@
-money = float(input("Enter the amount of money you have: "))
-coffee = 5
+number = int(input("Enter "))
 
-if money >= coffee:
-    print("  Here is your coffee.")
-else:
-    print("  You broke bro XD")
-
-print("This line will always be printed.")
-
+for number in range(0,number,3):
+    print(number)
