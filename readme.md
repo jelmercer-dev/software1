@@ -20,4 +20,4 @@ I completed exercises 1, 2, 3, 4, 5, 6.
 
 ## Module 6
 
-I completed exercises 1.
+I completed exercises 1, 2.
