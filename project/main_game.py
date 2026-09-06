@@ -1,4 +1,4 @@
-name = input("Enter your name: ")
+name = input("Enter your name: ").strip()
 age = int(input("Enter your age: "))
 
 if age < 12:
@@ -13,7 +13,7 @@ else:
 		print("- arvoitus: Hear a fictional riddle")
 		print('- lopeta: Quit the game')
 
-		command = input("Enter a command: ").lower()
+		command = input("Enter a command: ").lower().strip()
 
 		if command == "lopeta":
 			print("Game over. Goodbye!")
