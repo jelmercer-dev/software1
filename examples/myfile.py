@@ -1,10 +1,10 @@
-money = float(input("Enter the amount of money you have: "))
-coffee = 5
+class Dog:
+    def __init__(self, name, birth_year):
+        self.name = name
+        self.birth_year = birth_year
 
-if money >= coffee:
-    print("  Here is your coffee.")
-else:
-    print("  You broke bro XD")
+dog = Dog("Bubbles", 2022)
+dog1 = Dog("Waxz", 2076)
 
-print("This line will always be printed.")
-
+print(f"{dog.name:s} was born in {dog.birth_year:d}.")
+print(f"{dog1.name:s} was born in {dog1.birth_year:d}.")
