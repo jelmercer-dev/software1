@@ -1,4 +1,5 @@
-names = ["Viivi", "Ahmed", "Pekka", "Olga", "Mary"]
+def minamuoto_vt1(verbi):
+    vartalo = verbi[:-1]
+    return vartalo + "n"
 
-print(names[-2])
-print(names[1:2])
+print(minamuoto_vt1("asuu"))
