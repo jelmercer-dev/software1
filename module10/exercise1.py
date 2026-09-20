@@ -21,3 +21,4 @@ class Elevator:
     def floor_down(self):
             self.current_floor -= 1
             print(f"The elevator is now on floor {self.current_floor}")
+
