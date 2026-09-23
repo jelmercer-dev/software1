@@ -1,9 +1,19 @@
-def greet(times):
-    for i in range(times):
-        print("Round " + str(i) + " of saying hello.")
-    return
+class Potion:
+    def __init__(self, name):
+        self.name = name
 
-print("A new day starts with greetings.")
-greet(5)
-print("Let's greet some more.")
-greet(2)
+class HealthPotion(Potion):
+    def __init__(self, name, hp):
+        super().__init__(name)
+        self.hp = hp
+
+class Poison(Potion):
+    def __init__(self, name, hp, amount):
+        Potion.__init__(name)
+        self.hp = hp
+        self.amount = amount
+#Main program
+potion = HealthPotion("Health Potion",2)
+print(f"{potion.name}: + {potion.hp}")
+poison = Poison("Orc Slayer", 5, 3)
+print(f"{poison.name}: - {poison.hp}, remaining: {poison.amount}")
