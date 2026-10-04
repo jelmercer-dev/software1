@@ -1,0 +1,7 @@
+How to play
+
+Enter your name to start a new game or continue your saved game.
+Enter w to move, then type one of the available destinations.
+Enter e to collect an item in the room.
+Enter i to view your inventory, r to rest, or v to hear a riddle.
+Enter lopeta to quit. Your progress is saved automatically.

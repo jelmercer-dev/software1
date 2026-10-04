@@ -9,14 +9,18 @@ The game is split into a small package so that each class has one clear responsi
 
 project/
 ├── main_game.py       # Starts the game
+├── intro.txt          # Introductory text shown at startup
+├── instructions.txt   # Player instructions shown at startup
 ├── readme.md          # Project documentation
+├── saves/             # Per-player JSON text save files (created at runtime)
 └── game/
 	├── __init__.py    # Exposes Item, Player, and Room
 	├── game.py        # Creates the world and runs the menu
 	├── item.py        # Item class
 	├── player.py      # Player class and player actions
-	└── room.py        # Room class and room connections
+	├── room.py        # Room class and room connections
+	└── saves.py       # Saves and restores game state
 
 
-`Player` stores the player's name, inventory, and current room. `Room` stores its name, exits, and an optional item. `Item` stores an item's name and weight. At startup, the game creates one player, three rooms, and three items. The menu lets the player move between connected rooms, collect items, view the inventory, rest, hear a riddle, or quit.
+`Player` stores the player's name, inventory, and current room. `Room` stores its name, exits, and an optional item. `Item` stores an item's name and weight. At startup, the game reads `intro.txt` and `instructions.txt`, then creates one player, three rooms, and three items unless a save exists for the entered name. Progress is automatically saved as JSON text in `saves/`, including the player's location, inventory, and remaining room items. Enter the same name at startup to continue that player's game.
 
