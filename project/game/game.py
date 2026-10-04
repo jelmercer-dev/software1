@@ -1,17 +1,23 @@
+import os
+
 from .item import Item
 from .player import Player
 from .room import Room
 from .saves import load_game, save_game
 
-from pathlib import Path
 
-
-PROJECT_DIRECTORY = Path(__file__).resolve().parent.parent
+PROJECT_DIRECTORY = os.path.dirname(
+    os.path.dirname(
+        os.path.abspath(__file__)
+        )
+    )
 
 
 def show_startup_text(filename):
     try:
-        text = (PROJECT_DIRECTORY / filename).read_text(encoding="utf-8")
+        file_path = os.path.join(PROJECT_DIRECTORY, filename)
+        with open(file_path, "r") as file:
+            text = file.read()
     except OSError:
         print(f"Could not read {filename}.")
         return

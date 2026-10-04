@@ -11,8 +11,8 @@ project/
 ├── main_game.py       # Starts the game
 ├── intro.txt          # Introductory text shown at startup
 ├── instructions.txt   # Player instructions shown at startup
+├── save.json          # Player saves (created automatically)
 ├── readme.md          # Project documentation
-├── saves/             # Per-player JSON text save files (created at runtime)
 └── game/
 	├── __init__.py    # Exposes Item, Player, and Room
 	├── game.py        # Creates the world and runs the menu
@@ -22,5 +22,4 @@ project/
 	└── saves.py       # Saves and restores game state
 
 
-`Player` stores the player's name, inventory, and current room. `Room` stores its name, exits, and an optional item. `Item` stores an item's name and weight. At startup, the game reads `intro.txt` and `instructions.txt`, then creates one player, three rooms, and three items unless a save exists for the entered name. Progress is automatically saved as JSON text in `saves/`, including the player's location, inventory, and remaining room items. Enter the same name at startup to continue that player's game.
-
+`Player` stores the player's name, inventory, and current room. `Room` stores its name, exits, and an optional item. `Item` stores an item's name and weight. At startup, the game reads `intro.txt` and `instructions.txt`, then creates one player, three rooms, and three items unless a save exists for the entered name. Progress is automatically saved as JSON text in `save.json`, including the player's location, inventory, and remaining room items. Enter the same name at startup to continue that player's game.
