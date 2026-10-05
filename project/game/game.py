@@ -12,6 +12,14 @@ PROJECT_DIRECTORY = os.path.dirname(
         )
     )
 
+INFINITY_STONES = (
+    "Stone of Well-being",
+    "Stone of Equality",
+    "Stone of Nature",
+    "Stone of Opportunity",
+    "Stone of Cooperation",
+)
+
 
 def show_startup_text(filename):
     try:
@@ -21,20 +29,60 @@ def show_startup_text(filename):
     except OSError:
         print(f"Could not read {filename}.")
         return
-    print(text)
+    print("\n" + text)
 
 
 def create_world(player_name):
-    beach = Room("the beach", Item("glowing shell", 0.2))
-    forest = Room("the forest", Item("compass", 0.4))
-    cave = Room("the cave", Item("lantern", 1.5))
+    village = Room(
+        "the Renewal Village",
+        Item(INFINITY_STONES[0], 0.2),
+    )
+    riverlands = Room(
+        "the Riverlands",
+        Item(INFINITY_STONES[1], 0.2),
+    )
+    forest = Room(
+        "the Living Forest",
+        Item(INFINITY_STONES[2], 0.2),
+    )
+    highlands = Room(
+        "the Knowledge Highlands",
+        Item(INFINITY_STONES[3], 0.2),
+    )
+    commons = Room(
+        "the Unity Commons",
+        Item(INFINITY_STONES[4], 0.2),
+    )
 
-    beach.connect("forest", forest)
-    forest.connect("beach", beach)
-    forest.connect("cave", cave)
-    cave.connect("forest", forest)
+    village.connect("riverlands", riverlands)
+    village.connect("knowledge highlands", highlands)
+    riverlands.connect("renewal village", village)
+    riverlands.connect("living forest", forest)
+    forest.connect("riverlands", riverlands)
+    forest.connect("unity commons", commons)
+    highlands.connect("renewal village", village)
+    highlands.connect("unity commons", commons)
+    commons.connect("living forest", forest)
+    commons.connect("knowledge highlands", highlands)
 
-    return Player(player_name, beach)
+    return Player(player_name, village)
+
+
+def count_stones(player):
+    collected = {item.name for item in player.items}
+    return len(collected.intersection(INFINITY_STONES))
+
+
+def has_all_stones(player):
+    return count_stones(player) == len(INFINITY_STONES)
+
+
+def show_world_transformed():
+    print(
+        "\nThe five Infinity Stones unite! This world is transformed into "
+        "a fairer, more sustainable place, working toward all 17 "
+        "United Nations Sustainable Development Goals."
+    )
 
 
 def show_inventory(player):
@@ -49,9 +97,10 @@ def show_inventory(player):
 def show_menu(player):
     exits = ", ".join(player.location.exits)
     print(f"\nLocation: {player.location.name}")
+    print(f"Infinity Stones found: {count_stones(player)}/{len(INFINITY_STONES)}")
     print(f"\nAvailable destinations: {exits}\n")
     print("- w: Move to another room")
-    print("- e: Collect the item in this room")
+    print("- e: Collect the Infinity Stone in this room")
     print("- i: View your inventory")
     print("- r: Rest at the campfire")
     print("- v: Hear a fictional riddle")
@@ -61,7 +110,7 @@ def show_menu(player):
 def run_game():
     show_startup_text("intro.txt")
     show_startup_text("instructions.txt")
-    name = input("Enter your name: ").strip() or "Adventurer"
+    name = input("\nEnter your name: ").strip() or "Adventurer"
     player = load_game(name)
     while player is None:
         try:
@@ -72,7 +121,7 @@ def run_game():
 
         if age < 12:
             print(f"{name}, you are a minor and cannot play this game.")
-            continue
+            return
 
         player = create_world(name)
         print(f"Welcome, {player.name}! Starting a new game.")
@@ -81,6 +130,9 @@ def run_game():
 
     print(player.location.describe())
     save_game(player)
+    if has_all_stones(player):
+        show_world_transformed()
+        return
 
     while True:
         show_menu(player)
@@ -92,8 +144,18 @@ def run_game():
             return
         if command in {"e"}:
             item = player.collect_item()
-            print(f"\nYou collected the {item.name}.") if item else print("There is no item to collect here.")
+            if item:
+                print(f"\nYou collected the {item.name}.")
+                print(
+                    f"Infinity Stones found: "
+                    f"{count_stones(player)}/{len(INFINITY_STONES)}"
+                )
+            else:
+                print("There is no Infinity Stone to collect here.")
             save_game(player)
+            if has_all_stones(player):
+                show_world_transformed()
+                return
         elif command == "w":
             direction = input("Where would you like to go? ").lower().strip()
             if player.move(direction):
@@ -104,7 +166,8 @@ def run_game():
         elif command in {"i"}:
             show_inventory(player)
         elif command in {"r"}:
-            print("You rest by the campfire and regain your courage.")
+            print("You rest by the campfire and regain your courage.(game saved)")
+            save_game(player)
         elif command in {"v"}:
             print("Riddle: What has keys but cannot open locks? A piano!")
         else:

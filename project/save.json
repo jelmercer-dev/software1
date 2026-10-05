@@ -1,0 +1,65 @@
+{
+  "den": {
+    "player_name": "Den",
+    "location": "the Knowledge Highlands",
+    "inventory": [
+      {
+        "name": "Stone of Well-being",
+        "weight": 0.2
+      },
+      {
+        "name": "Stone of Equality",
+        "weight": 0.2
+      },
+      {
+        "name": "Stone of Nature",
+        "weight": 0.2
+      },
+      {
+        "name": "Stone of Cooperation",
+        "weight": 0.2
+      },
+      {
+        "name": "Stone of Opportunity",
+        "weight": 0.2
+      }
+    ],
+    "room_items": {
+      "the Knowledge Highlands": null,
+      "the Unity Commons": null,
+      "the Living Forest": null,
+      "the Riverlands": null,
+      "the Renewal Village": null
+    }
+  },
+  "ser": {
+    "player_name": "ser",
+    "location": "the Riverlands",
+    "inventory": [
+      {
+        "name": "Stone of Well-being",
+        "weight": 0.2
+      },
+      {
+        "name": "Stone of Equality",
+        "weight": 0.2
+      }
+    ],
+    "room_items": {
+      "the Riverlands": null,
+      "the Living Forest": {
+        "name": "Stone of Nature",
+        "weight": 0.2
+      },
+      "the Unity Commons": {
+        "name": "Stone of Cooperation",
+        "weight": 0.2
+      },
+      "the Knowledge Highlands": {
+        "name": "Stone of Opportunity",
+        "weight": 0.2
+      },
+      "the Renewal Village": null
+    }
+  }
+}

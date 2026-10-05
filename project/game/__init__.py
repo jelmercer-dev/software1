@@ -1,4 +1,4 @@
-"""Classes and game logic for the island adventure."""
+"""Classes and game logic for the adventure."""
 
 from .item import Item
 from .player import Player

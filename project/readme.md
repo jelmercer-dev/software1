@@ -1,4 +1,4 @@
-# Island Adventure
+# The Five Stones of a Better World
 
 Denys Khliustin
 
@@ -22,4 +22,4 @@ project/
 	└── saves.py       # Saves and restores game state
 
 
-`Player` stores the player's name, inventory, and current room. `Room` stores its name, exits, and an optional item. `Item` stores an item's name and weight. At startup, the game reads `intro.txt` and `instructions.txt`, then creates one player, three rooms, and three items unless a save exists for the entered name. Progress is automatically saved as JSON text in `save.json`, including the player's location, inventory, and remaining room items. Enter the same name at startup to continue that player's game.
+`Player` stores the player's name, inventory, and current room. `Room` stores its name, exits, and an optional item. `Item` stores an item's name and weight. At startup, the game reads `intro.txt` and `instructions.txt`, then creates one player and a connected world of five locations, each containing one unique Infinity Stone, unless a save exists for the entered name. Collect all five stones to complete the adventure and transform the world toward all 17 United Nations Sustainable Development Goals. Progress is automatically saved as JSON text in `save.json`, including the player's location, inventory, and remaining room items. Enter the same name at startup to continue that player's game.

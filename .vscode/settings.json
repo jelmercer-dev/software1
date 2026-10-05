@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "lopeta"
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }

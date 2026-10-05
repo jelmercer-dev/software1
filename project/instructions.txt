@@ -1,7 +1,13 @@
 How to play
 
+Find the five Infinity Stones hidden across the Renewal Village, Riverlands,
+Living Forest, Knowledge Highlands, and Unity Commons. Each location contains
+one stone.
+
 Enter your name to start a new game or continue your saved game.
 Enter w to move, then type one of the available destinations.
-Enter e to collect an item in the room.
+Enter e to collect the Infinity Stone in your location.
 Enter i to view your inventory, r to rest, or v to hear a riddle.
-Enter lopeta to quit. Your progress is saved automatically.
+Your progress is saved automatically. Collect all five stones to transform the
+world and help it work toward all 17 United Nations Sustainable Development
+Goals. Enter lopeta to quit.
