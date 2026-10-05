@@ -61,5 +61,61 @@
       },
       "the Renewal Village": null
     }
+  },
+  "tanos": {
+    "player_name": "Tanos",
+    "location": "the Renewal Village",
+    "inventory": [
+      {
+        "name": "Stone of Well-being",
+        "weight": 0.2
+      }
+    ],
+    "room_items": {
+      "the Renewal Village": null,
+      "the Knowledge Highlands": {
+        "name": "Stone of Opportunity",
+        "weight": 0.2
+      },
+      "the Unity Commons": {
+        "name": "Stone of Cooperation",
+        "weight": 0.2
+      },
+      "the Living Forest": {
+        "name": "Stone of Nature",
+        "weight": 0.2
+      },
+      "the Riverlands": {
+        "name": "Stone of Equality",
+        "weight": 0.2
+      }
+    }
+  },
+  "kate": {
+    "player_name": "kate",
+    "location": "the Renewal Village",
+    "inventory": [],
+    "room_items": {
+      "the Renewal Village": {
+        "name": "Stone of Well-being",
+        "weight": 0.2
+      },
+      "the Knowledge Highlands": {
+        "name": "Stone of Opportunity",
+        "weight": 0.2
+      },
+      "the Unity Commons": {
+        "name": "Stone of Cooperation",
+        "weight": 0.2
+      },
+      "the Living Forest": {
+        "name": "Stone of Nature",
+        "weight": 0.2
+      },
+      "the Riverlands": {
+        "name": "Stone of Equality",
+        "weight": 0.2
+      }
+    }
   }
 }

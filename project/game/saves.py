@@ -2,7 +2,7 @@ import json
 import os
 
 from .item import Item
-from .player import Player
+
 
 
 SAVE_FILE = os.path.join(

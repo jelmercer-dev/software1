@@ -110,7 +110,7 @@ def show_menu(player):
 def run_game():
     show_startup_text("intro.txt")
     show_startup_text("instructions.txt")
-    name = input("\nEnter your name: ").strip() or "Adventurer"
+    name = input("\nEnter your name: ").strip() or "Tanos"
     player = load_game(name)
     while player is None:
         try:
@@ -124,9 +124,9 @@ def run_game():
             return
 
         player = create_world(name)
-        print(f"Welcome, {player.name}! Starting a new game.")
+        print(f"\nWelcome, {player.name}! Starting a new game.")
     else:
-        print(f"Welcome back, {player.name}! Your saved game has been restored.")
+        print(f"\nWelcome back, {player.name}! Your saved game has been restored.")
 
     print(player.location.describe())
     save_game(player)
@@ -140,7 +140,7 @@ def run_game():
 
         if command in {"lopeta"}:
             save_game(player)
-            print("Game over. Goodbye!")
+            print("Goodbye!")
             return
         if command in {"e"}:
             item = player.collect_item()
@@ -166,7 +166,7 @@ def run_game():
         elif command in {"i"}:
             show_inventory(player)
         elif command in {"r"}:
-            print("You rest by the campfire and regain your courage.(game saved)")
+            print("You rest by the campfire.(game saved)")
             save_game(player)
         elif command in {"v"}:
             print("Riddle: What has keys but cannot open locks? A piano!")
