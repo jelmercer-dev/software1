@@ -69,22 +69,23 @@ def load_game(player_name):  # loads a save with the specified player's name
     try:
         with open(SAVE_FILE, "r") as file:
             saved_games = json.load(file)
-        state = saved_games.get(player_name.casefold())
+        state = saved_games.get(player_name.casefold())  # looking for a save by a name
         if state is None:
-            return None
-        if state["player_name"].casefold() != player_name.casefold():
             return None
 
         from .game import create_world
 
-        player = create_world(state["player_name"])
-        rooms = get_rooms(player.location)
-        player.location = rooms[state["location"]]
+        player = create_world(state["player_name"])   # creates a new world
+        rooms = get_rooms(player.location)            # find locations
+        player.location = rooms[state["location"]]    # moves a player in his last saved location
+        # adding items in player's inventory if he got them
         player.items = [
-            Item(item["name"], item["weight"]) for item in state["inventory"]
+            Item(item["name"],
+                 item["weight"]) for item in state["inventory"]
         ]
-        for room_name, item in state["room_items"].items():
-            if room_name in rooms:
+        # Appropriates items to their rooms
+        for room_name, item in state["room_items"].items(): # iterates over each saved item in the rooms
+            if room_name in rooms:  # checks if room in the dict
                 rooms[room_name].item = (
                     Item(item["name"], item["weight"]) if item else None
                 )
