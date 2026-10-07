@@ -90,6 +90,6 @@ def load_game(player_name):  # loads a save with the specified player's name
                     Item(item["name"], item["weight"]) if item else None
                 )
         return player
-    except (OSError, ValueError, KeyError, TypeError, AttributeError):
+    except (OSError):
         print("The saved game could not be loaded. Starting a new game instead.")
         return None
