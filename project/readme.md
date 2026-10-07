@@ -8,17 +8,29 @@ The game is split into a small package so that each class has one clear responsi
 
 
 project/
+
 ├── main_game.py       # Starts the game
+
 ├── intro.txt          # Introductory text shown at startup
+
 ├── instructions.txt   # Player instructions shown at startup
+
 ├── save.json          # Player saves (created automatically)
+
 ├── readme.md          # Project documentation
+
 └── game/
+
 	├── __init__.py    # Exposes Item, Player, and Room
+	
 	├── game.py        # Creates the world and runs the menu
+	
 	├── item.py        # Item class
+	
 	├── player.py      # Player class and player actions
+	
 	├── room.py        # Room class and room connections
+	
 	└── saves.py       # Saves and restores game state
 
 
