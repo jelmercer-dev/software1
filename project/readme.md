@@ -1,4 +1,4 @@
-# The Five Stones of a Better World
+# Five Stones
 
 Denys Khliustin
 
