@@ -9,7 +9,7 @@ The game is split into a small package so that each class has one clear responsi
 
 project/
 
-├── main_game.py       # Starts the game
+├── launch.py       # Starts the game
 
 ├── intro.txt          # Introductory text shown at startup
 

@@ -1,6 +1,6 @@
 How to play
 
-Use file  "main_game.py" to launch the game. 
+Use file  "launch.py" to launch the game. 
 On mac: right-click on the file --> open with --> Python Launcher
 On windows: 
 
