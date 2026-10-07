@@ -2,6 +2,14 @@
 
 Denys Khliustin
 
+You have arrived in a new world that has not yet developed as far as our own.
+Explore the Renewal Village, Riverlands, Living Forest, Knowledge Highlands, and
+Unity Commons to find five legendary Infinity Stones, one in each location. Use
+their power to help transform the world into a fair and sustainable place where
+everyone can thrive, without leaving anyone behind. Your journey will bring the
+world closer to all 17 United Nations Sustainable Development Goals, balancing
+people's well-being, prosperity, and care for the planet.
+
 ## Launch instructions
 
 Download last Python version
