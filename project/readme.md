@@ -2,6 +2,19 @@
 
 Denys Khliustin
 
+## Launch instructions
+
+Download last Python version
+
+Use file  "launch.py" to launch the game. 
+On mac: right-click on the file --> open with --> Python Launcher
+On windows: right-click on the file --> open with --> Python
+
+It's also possible to open it with vscode
+Download and open vscode --> download Python extension --> press launch button in the top right corner (see image below)
+![launch button](image.png)
+
+
 ## Project structure
 
 The game is split into a small package so that each class has one clear responsibility:

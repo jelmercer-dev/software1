@@ -1,9 +1,5 @@
 How to play
 
-Use file  "launch.py" to launch the game. 
-On mac: right-click on the file --> open with --> Python Launcher
-On windows: 
-
 Find the five Infinity Stones hidden across the Renewal Village, Riverlands,
 Living Forest, Knowledge Highlands, and Unity Commons. Each location contains
 one stone.
