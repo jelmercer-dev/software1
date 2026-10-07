@@ -86,6 +86,7 @@ def load_game(player_name):  # loads a save with the specified player's name
         # Appropriates items to their rooms
         for room_name, item in state["room_items"].items(): # iterates over each saved item in the rooms
             if room_name in rooms:  # checks if room in the dict
+                # assign the item to the room
                 rooms[room_name].item = (
                     Item(item["name"], item["weight"]) if item else None
                 )
