@@ -123,7 +123,7 @@
   },
   "a": {
     "player_name": "a",
-    "location": "the Riverlands",
+    "location": "the Living Forest",
     "inventory": [
       {
         "name": "Stone of Well-being",
@@ -135,20 +135,20 @@
       }
     ],
     "room_items": {
-      "the Riverlands": null,
-      "the Renewal Village": null,
-      "the Knowledge Highlands": {
-        "name": "Stone of Opportunity",
+      "the Living Forest": {
+        "name": "Stone of Nature",
         "weight": 0.2
       },
       "the Unity Commons": {
         "name": "Stone of Cooperation",
         "weight": 0.2
       },
-      "the Living Forest": {
-        "name": "Stone of Nature",
+      "the Knowledge Highlands": {
+        "name": "Stone of Opportunity",
         "weight": 0.2
-      }
+      },
+      "the Renewal Village": null,
+      "the Riverlands": null
     }
   }
 }
