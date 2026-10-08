@@ -83,14 +83,6 @@ def count_stones(player):
 def has_all_stones(player):
     return count_stones(player) == len(INFINITY_STONES)
 
-# Display the ending message when the player collected all stones.
-def show_world_transformed():
-    print(
-        "\nThe five Infinity Stones unite! This world is transformed into "
-        "a fairer, more sustainable place, working toward all 17 "
-        "United Nations Sustainable Development Goals."
-    )
-
 # Print the player's current inventory or a message if empty.
 def show_inventory(player):
     if not player.items:
@@ -99,6 +91,14 @@ def show_inventory(player):
     print("\nYour inventory:")
     for item in player.items:
         print(f"- {item}")
+
+# Display the ending message when the player collected all stones.
+def show_world_transformed():
+    print(
+        "\nThe five Infinity Stones unite! This world is transformed into "
+        "a fairer, more sustainable place, working toward all 17 "
+        "United Nations Sustainable Development Goals."
+    )
 
 # Diplays the menu of available actions based on player's current location and progress in the game.
 def show_menu(player):

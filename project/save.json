@@ -183,5 +183,32 @@
       "the Renewal Village": null,
       "the Riverlands": null
     }
+  },
+  "tanos": {
+    "player_name": "Tanos",
+    "location": "the Renewal Village",
+    "inventory": [],
+    "room_items": {
+      "the Renewal Village": {
+        "name": "Stone of Well-being",
+        "weight": 0.2
+      },
+      "the Knowledge Highlands": {
+        "name": "Stone of Opportunity",
+        "weight": 0.2
+      },
+      "the Unity Commons": {
+        "name": "Stone of Cooperation",
+        "weight": 0.2
+      },
+      "the Living Forest": {
+        "name": "Stone of Nature",
+        "weight": 0.2
+      },
+      "the Riverlands": {
+        "name": "Stone of Equality",
+        "weight": 0.2
+      }
+    }
   }
 }
