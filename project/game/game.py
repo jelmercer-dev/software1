@@ -118,9 +118,9 @@ def show_menu(player):
 def run_game():
 
     show_startup_text("intro.txt")
-    show_startup_text("instructions.txt")
+    show_startup_text("instructions.txt") 
 
-    name = input("\nEnter your name: ").strip() or "Tanos"
+    name = input("\nEnter your name: ").strip() or "Tanos"  # Use "Tanos" as a default name if the player doesn't enter one.
     player = load_game(name) # Load a saved game if it exists.
     loaded_game = player is not None # Check if a saved game was loaded.
     # If the player is new, ask for their age and create a new world.
