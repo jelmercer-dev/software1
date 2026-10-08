@@ -12,5 +12,5 @@ class Room:
         if self.item:
             description += f" You see a {self.item.name}."
         else:
-            description += " There are no items here."
+            description += "There are no items here."
         return description
