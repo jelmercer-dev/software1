@@ -33,15 +33,15 @@ The game is split into a small package so that each class has one clear responsi
 
 project/
 
-├── launch.py      		 # Starts the game
+├── launch.py      			 # Starts the game
 
-├── intro.txt          	 # Introductory text shown at startup
+├── intro.txt      	    	 # Introductory text shown at startup
 
-├── instructions.txt     # Player instructions shown at startup
+├── instructions.txt   		  # Player instructions shown at startup
 
-├── save.json            # Player saves (created automatically)
+├── save.json         	   # Player saves (created automatically)
 
-├── readme.md            # Project documentation
+├── readme.md        	    # Project documentation
 
 └── game/
 
