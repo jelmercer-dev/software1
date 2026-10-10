@@ -15,8 +15,8 @@ people's well-being, prosperity, and care for the planet.
 Download last Python version
 
 Use file  "launch.py" to launch the game. 
-On mac: right-click on the file --> open with --> Python Launcher 
 
+On mac: right-click on the file --> open with --> Python Launcher 
 On windows: right-click on the file --> open with --> Python
 
 It's also possible to open it with vscode

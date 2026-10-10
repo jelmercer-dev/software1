@@ -24,6 +24,7 @@ INFINITY_STONES = (
 
 # Function to display files like intrro.txt and instuctions.txt.
 def show_startup_text(filename):
+
     try:
         file_path = os.path.join(PROJECT_DIRECTORY, filename)
         with open(file_path, "r") as file:
@@ -102,6 +103,7 @@ def show_world_transformed():
 
 # Diplays the menu of available actions based on player's current location and progress in the game.
 def show_menu(player):
+
     exits = ", ".join(player.location.exits)
     print(f"\nLocation: {player.location.name}")
     print(f"Infinity Stones found: {count_stones(player)}/{len(INFINITY_STONES)}")
@@ -151,6 +153,7 @@ def run_game():
 
     # Main game loop
     while True:
+
         show_menu(player)
         command = input("\nEnter a command: ").lower().strip()
         # List of commands.
@@ -172,6 +175,7 @@ def run_game():
             if has_all_stones(player):
                 show_world_transformed()
                 return
+            
         # Move a player to a new room.
         elif command == "w":
             direction = input("\nWhere would you like to go? ").lower().strip()
